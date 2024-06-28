@@ -1,0 +1,122 @@
+:root {
+  font-family: sans-serif;
+}
+
+table tbody tr td {
+  transition: background-color 50ms ease-in-out;
+}
+
+@media (min-width: 1170px) {
+  table tbody tr:hover {
+    background-color: #e0e0e0;
+  }
+
+  table tbody tr td p,
+  table thead tr td p {
+    padding: 1rem;
+  }
+
+  table thead tr {
+    background-color: orange;
+    color: white;
+  }
+
+  table tbody tr > * {
+    border-left: 1px solid gray;
+  }
+
+  table tbody tr > *:first-child {
+    border-left: none;
+  }
+
+  table thead tr > * {
+    border-left: 1px solid white;
+  }
+
+  table thead tr > *:first-child {
+    border-left: none;
+  }
+
+  table {
+    border: 1px solid black;
+    border-spacing: 0;
+  }
+}
+
+@media (max-width: 1169px) {
+  table {
+    display: flex;
+    flex-direction: column;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tbody tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 5px 5px #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  table tbody tr > * {
+    border-top: 1px solid #a0a0a0;
+  }
+
+  table tbody tr td:first-child {
+    border-top: none;
+  }
+
+  table tbody tr td {
+    display: flex;
+  }
+
+  table tbody tr td::before {
+    display: inline-block;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: hsl(var(--local-hue), 60%, 60%);
+    min-width: 20%;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  table tbody tr td p {
+    font-size: 0.75rem;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  table tbody tr td:nth-child(1)::before {
+    content: "ID";
+    --local-hue: 20deg;
+  }
+
+  table tbody tr td:nth-child(2)::before {
+    content: "Personaje";
+    --local-hue: 40deg;
+  }
+
+  table tbody tr td:nth-child(3)::before {
+    content: "Celular";
+    --local-hue: 60deg;
+  }
+
+  table tbody tr td:nth-child(4)::before {
+    content: "Correo";
+    --local-hue: 80deg;
+  }
+
+  table tbody tr td:nth-child(5)::before {
+    content: "Descripción";
+    --local-hue: 100deg;
+  }
+
+  table tbody tr td:hover {
+    background-color: lightgray;
+  }
+}
